@@ -28,7 +28,6 @@ struct ant{
 ant ants[100];
 
 void init(){
-	//glutFullScreen();
 	glClearColor(1.0,1.0,1.0,1.0);
 	glClear(GL_COLOR_BUFFER_BIT);
 	srand(time(NULL));
@@ -48,7 +47,6 @@ int main(int argc,char **argv) {
 	glutInitWindowPosition(0,0);
 	glutInitWindowSize(col,row);
 	glutCreateWindow("langtons ant");
-	//glutFullScreen();
 	glutDisplayFunc(display_callback);
 	glutReshapeFunc(reshape_callback);
 	glutTimerFunc(0,timer_callback,0);
@@ -59,7 +57,6 @@ int main(int argc,char **argv) {
 
 
 void display_callback(){
-	//glClear(GL_COLOR_BUFFER_BIT);
 	for(ant &act: ants){
 		float pixel[3];
 			glReadPixels(act.x,act.y,1,1,GL_RGB,GL_FLOAT,&pixel);
@@ -94,9 +91,7 @@ void display_callback(){
 			act.x = ((int)act.x+(int)col)%(int)col;
 			act.y = (act.y+(int)row)%(int)row;
 	}
-	//drawpoints();
 	glutSwapBuffers();
-	//glutPostRedisplay();
 }
 
 
