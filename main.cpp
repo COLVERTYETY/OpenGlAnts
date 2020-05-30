@@ -4,8 +4,8 @@
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
 
-#define  COL 1800.0
-#define ROW 1000.0
+#define  COL 800.0
+#define ROW 600.0
 #define fps 30
 
 
