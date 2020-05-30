@@ -25,7 +25,7 @@ struct ant{
 	int dir;
 };
 
-ant ants[1000];
+ant ants[100];
 
 void init(){
 	//glutFullScreen();
